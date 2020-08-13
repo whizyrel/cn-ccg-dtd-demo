@@ -1,0 +1,15 @@
+:root {
+    --gotham-light: url('/src/assets/fonts/GothamRoundedLight_21020.ttf');
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    font-family: Gotham Rounded;
+}
+
+@font-face {
+    font-family: Gotham Rounded;
+    src: var(--gotham-light), format('ttf');
+}
