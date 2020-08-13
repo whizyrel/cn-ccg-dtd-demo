@@ -3,6 +3,7 @@
     --user-flex-lg-dim: 30%;
     --user-flex-md-dim: 40%;
     --panel-header-background: #ededed;
+    --search-container-background: #f6f6f6;
 }
 
 @font-face {
@@ -17,26 +18,41 @@ body {
     font-family: Gotham Rounded;
 }
 
-.dtd--main__container {
+.dtd--main__container,
+.dtd--user__section--search--box,
+.dtd--user__section--member,
+.dtd--user__section--member__details--name-date,
+.dtd--user__section--member__details--profession-star,
+.dtd--user__section--header,
+.dtd--profile__section--header {
     flex-direction: row;
 }
 
-.dtd--user__section {
+.dtd--user__section,
+.dtd--user__section--members-list,
+.dtd--user__section--member__details--preview {
     flex-direction: column;
 }
 
 .dtd--user__section {
     flex:  var(--user-flex-lg-dim);
+    box-shadow: 1px 0 0.5px 0.2px #f1f1f1;
 }
 
 .dtd--profile__section {
     flex: calc(100% - var(--user-flex-lg-dim));
+    border-left: 1px solid #0000000d;
+}
+
+.dtd--user__section--header,
+.dtd--profile-section--header {
+    height: 59px;
+    background-color: var(--panel-header-background);
+    z-index: 200;
 }
 
 .dtd--user__section--header {
-    height: 59px;
     padding: 10px 16px;
-    background-color: var(--panel-header-background);
 }
 
 .dtd--user__section--dp {
@@ -50,6 +66,83 @@ body {
     width: 24px;
     height: 24px;
     color: #919191;
+}
+
+.dtd--user__section--icon:hover {
+    cursor: pointer;
+}
+
+.dtd--user__section--search {
+    height: 49px;
+    background-color: var(--search-container-background);
+    border-bottom: 1px solid #eaeaea;
+
+}
+
+.dtd--user__section--search-box {
+    background-color: #fff;
+    border-radius: 18px;
+}
+
+.dtd--user__section--search-input {
+    height: 80%;
+    border: 0;
+    outline: 0;
+}
+
+.dtd--user__section--members-list {
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+
+.dtd--user__section--member {
+    height: 72px;
+}
+
+.dtd--user__section--member:hover {
+    background-color: #f5f5f5;
+    cursor: pointer;
+}
+
+.dtd--user__section--member__active {
+    background-color: #ebebeb;
+}
+
+.dtd--user__section--member__photo {
+    min-width: 49px;
+}
+
+.dtd--user__section--member__photo div {
+    border-radius: 50%;
+    background-color: #f1f1f1;
+    height: 49px;
+}
+
+.dtd--user__section--member:last-child {
+    margin-bottom: 1rem;
+}
+
+.dtd--user__section--member__details--name-date {
+    height: fit-content;
+}
+
+.dtd--user__section--member__details--name-date :first-child {
+    font-weight: 600;
+}
+
+.dtd--user__section--member__details--name-date :last-child {
+    color: #00000073;
+    font-size: 12px;
+}
+
+.dtd--user__section--member__details--name-date :first-child,
+.dtd--user__section--member__details--profession-star :first-child {
+    width: 120px;
+}
+
+.dtd--user__section--member__details--name-date :last-child,
+.dtd--user__section--member__details--profession-star :last-child {
+    max-width: calc(100% - 120px);
 }
 
 @media screen and (max-width: 900px) {
