@@ -1,5 +1,13 @@
 :root {
     --gotham-light: url('/src/assets/fonts/GothamRoundedLight_21020.ttf');
+    --user-flex-lg-dim: 30%;
+    --user-flex-md-dim: 40%;
+    --panel-header-background: #ededed;
+}
+
+@font-face {
+    font-family: Gotham Rounded;
+    src: var(--gotham-light), format('ttf');
 }
 
 body {
@@ -9,7 +17,47 @@ body {
     font-family: Gotham Rounded;
 }
 
-@font-face {
-    font-family: Gotham Rounded;
-    src: var(--gotham-light), format('ttf');
+.dtd--main__container {
+    flex-direction: row;
+}
+
+.dtd--user__section {
+    flex-direction: column;
+}
+
+.dtd--user__section {
+    flex:  var(--user-flex-lg-dim);
+}
+
+.dtd--profile__section {
+    flex: calc(100% - var(--user-flex-lg-dim));
+}
+
+.dtd--user__section--header {
+    height: 59px;
+    padding: 10px 16px;
+    background-color: var(--panel-header-background);
+}
+
+.dtd--user__section--dp {
+    width: 40px;
+    height: 40px;
+    background-color: #fff;
+    border-radius: 50%;
+}
+
+.dtd--user__section--icon {
+    width: 24px;
+    height: 24px;
+    color: #919191;
+}
+
+@media screen and (max-width: 900px) {
+    .dtd--user__section {
+        flex: var(--user-flex-md-dim);
+    }
+
+    .dtd--profile__section {
+        flex: calc(100% - var(--user-flex-md-dim));
+    }
 }
