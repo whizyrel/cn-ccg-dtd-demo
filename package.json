@@ -1,0 +1,23 @@
+{
+  "name": "tcn-ccg-dtd-demo",
+  "version": "1.0.0",
+  "description": "TCN CCG Digital Tech Diamond's Learning Friday Template Demo",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "bootstrap": "^4.5.0",
+    "jquery": "^3.5.1",
+    "popper.js": "^1.16.1"
+  },
+  "keywords": [
+    "template",
+    "tech",
+    "diamond",
+    "TCN",
+    "CCG"
+  ],
+  "author": "Israel O.",
+  "license": "ISC"
+}
